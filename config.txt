@@ -1,0 +1,35 @@
+# At first, you need to ensure you have python3 and ffmpeg package
+# If you do not have it:
+# To download ffmpeg: https://www.ffmpeg.org/download.html
+# To download python3: https://www.python.org/downloads/
+
+# After downloading them
+# 1.put your original video file inside this folder
+# 2.Set the original video's name(contains suffix) to input_file(below)
+
+input_file=sample.mov
+
+# 4.Below is the default configuration according to the BiliBili's requirement
+# (the ultimate configuration that won't be compressed again by server side, set file to .mp4 format)
+# Do not change them if you don't know what it is!!!
+
+output_file=output.mp4
+
+video_bit_rate=6000k
+video_codec=libx264
+pix_fmt=yuv420p
+crf=16
+
+audio_bit_rate=320k
+audio_codec=aac
+audio_sample_rate=44100
+audio_channels=2
+
+# 5.If your want to make your video's fps to 60, set the 60fps below to yes, this function may take a long time to run, please be patient.
+60fps=no
+
+# 6.Open terminal and set directory to this folder
+# 7.Type:
+# python3 ffmpeg.py
+# and press enter to run it
+
